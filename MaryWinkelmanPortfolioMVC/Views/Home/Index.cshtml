@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<body style="overflow:hidden;">
+    <header class="business-header"></header>
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4">
+                <a href=@Url.Action("Index","Projects", new { id = 1 })>
+                    <img class="img-circle img-responsive img-center" src="~/Images/HomeImages/HouseBuilderScreenShot.png" alt="">
+                </a>
+                <h2 class="circleText">C# Console Applications</h2>
+            </div>
+            <div class="col-sm-4">
+                <a href=@Url.Action("Index","Projects", new { id = 2 })>
+                    <img class="img-circle img-responsive img-center" src="~/Images/HomeImages/rsz_closetspaceimage_-_copy.png" alt="">
+                </a>
+                <h2 class="circleText">ASP.NET MVC Web Applications</h2>
+            </div>
+            <div class="col-sm-4">
+                <a href=@Url.Action("Index","Projects", new { id = 3 })>
+                    <img class="img-circle img-responsive img-center" src="~/Images/HomeImages/DatabaseDesign.JPG" alt="">
+                </a>
+                <h2 class="circleText">Relational Databases</h2>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</body>

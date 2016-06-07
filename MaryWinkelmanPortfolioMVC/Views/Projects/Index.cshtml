@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MaryWinkelmanPortfolioMVC.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+}
+<body style="background: url('../../Images/HomeImages/IMG_5586 (1).jpg'); ">
+    <h1 style="padding-top: 20px;color:gainsboro;">Category: @ViewBag.Category.Name</h1>
+    @foreach (var item in Model)
+    {
+        <div class="row" style="padding-top:20px">
+            <div class="img-thumbnail col-md-7">
+                <div id="portfolioImage" class="col-md-6 img-portfolio" style="position:center;">
+                    <h3>@item.Name</h3>
+                    <img src="@Url.Content(item.Screenshot)" alt="" style="max-width:550px;">
+                    <p style="padding-top:10px;">@item.Description</p>
+                    @if (item.GithubLink != null)
+                    { <a href="@item.GithubLink">Check out this project on Github</a>}
+                </div>
+            </div>
+        </div>
+    }
+</body>       
+
